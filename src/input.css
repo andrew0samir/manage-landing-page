@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap');
+
+@theme {
+    /* primary colors */
+    --color-brightRed: hsl(12, 88%, 59%);
+    --color-brightRedLight: hsl(12, 88%, 69%);
+    --color-brightRedVeryLight: hsl(12, 88%, 90%);
+    --color-darkBlue: hsl(228, 39%, 23%);
+
+    /* neutral colors */
+    --color-darkGrayBlue: hsl(227, 12%, 61%);
+    --color-veryDarkBlue: hsl(233, 12%, 13%);
+    --color-veryPaleRed: hsl(13, 100%, 96%);
+    --color-veryLightGray: hsl(0, 0%, 98%);
+
+    /* font family */
+    --font-vietnam:"Be Vietnam Pro", serif;
+}
+
+/* nav section */
+.nav{
+    @apply relative container mx-auto p-5
+}
+.nav-container{
+    @apply flex items-center justify-between
+}
+.menu-items{
+    @apply hidden md:flex justify-between gap-x-8
+}
+.menu-link{
+    @apply hover:text-darkGrayBlue 
+}
+.btn{
+    @apply p-3 px-6 text-white bg-brightRed rounded-full hover:bg-brightRedLight
+}
+
+/* hero section */
+.hero-container{
+    @apply flex flex-col-reverse items-center container mx-auto px-6 mt-10 my-0 md:flex-row md:my-0
+}
+.hero-header{
+    @apply max-w-md text-center text-darkBlue text-4xl font-bold md:text-5xl md:text-left
+}
+.hero-p{
+    @apply max-w-sm my-12 text-center text-gray-400 md:text-left
+}
+
+/* feature section */
+.feature-container{
+    @apply container mx-auto flex flex-col items-center px-4 mt-10 gap-12 md:gap-0 md:flex-row
+}
+.feature-h{
+    @apply max-w-md text-4xl font-bold text-center md:text-left
+}
+.feature-p{
+    @apply max-w-md text-center text-darkGrayBlue md:text-left
+}
+
+
+
+
+
+
+
+
