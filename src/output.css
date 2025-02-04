@@ -554,14 +554,38 @@
       max-width: 96rem;
     }
   }
+  .mx-0 {
+    margin-inline: calc(var(--spacing) * 0);
+  }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
+  .mx-3 {
+    margin-inline: calc(var(--spacing) * 3);
+  }
   .mx-4 {
     margin-inline: calc(var(--spacing) * 4);
   }
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
   }
+  .mx-10 {
+    margin-inline: calc(var(--spacing) * 10);
+  }
+  .mx-32 {
+    margin-inline: calc(var(--spacing) * 32);
+  }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
   }
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
@@ -617,11 +641,20 @@
   .table {
     display: table;
   }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
   .max-w-6xl {
     max-width: var(--container-6xl);
+  }
+  .flex-1 {
+    flex: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -635,8 +668,14 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-col-reverse {
+    flex-direction: column-reverse;
+  }
   .items-center {
     align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
   }
   .justify-between {
     justify-content: space-between;
@@ -644,11 +683,20 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
+  .gap-x-3 {
+    column-gap: calc(var(--spacing) * 3);
+  }
   .gap-x-4 {
     column-gap: calc(var(--spacing) * 4);
+  }
+  .gap-x-32 {
+    column-gap: calc(var(--spacing) * 32);
   }
   .gap-y-3 {
     row-gap: calc(var(--spacing) * 3);
@@ -659,8 +707,18 @@
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
   }
+  .gap-y-8 {
+    row-gap: calc(var(--spacing) * 8);
+  }
   .gap-y-12 {
     row-gap: calc(var(--spacing) * 12);
+  }
+  .space-x-32 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 32) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 32) * calc(1 - var(--tw-space-x-reverse)));
+    }
   }
   .rounded {
     border-radius: 0.25rem;
@@ -684,6 +742,9 @@
   }
   .bg-brightRedVeryLight {
     background-color: var(--color-brightRedVeryLight);
+  }
+  .bg-veryDarkBlue {
+    background-color: var(--color-veryDarkBlue);
   }
   .bg-veryLightGray {
     background-color: var(--color-veryLightGray);
@@ -711,6 +772,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
@@ -783,6 +847,25 @@
       }
     }
   }
+  .hover\:text-brightRed {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-brightRed);
+      }
+    }
+  }
+  .focus\:outline {
+    &:focus {
+      outline-style: var(--tw-outline-style);
+      outline-width: 1px;
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
+  }
   .md\:mb-4 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 4);
@@ -818,6 +901,11 @@
       max-width: var(--container-xl);
     }
   }
+  .md\:flex-col {
+    @media (width >= 48rem) {
+      flex-direction: column;
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
@@ -826,6 +914,11 @@
   .md\:items-baseline {
     @media (width >= 48rem) {
       align-items: baseline;
+    }
+  }
+  .md\:items-start {
+    @media (width >= 48rem) {
+      align-items: flex-start;
     }
   }
   .md\:justify-start {
@@ -1075,6 +1168,11 @@
   syntax: "*";
   inherits: false;
   initial-value: skewY(0);
+}
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-border-style {
   syntax: "*";
