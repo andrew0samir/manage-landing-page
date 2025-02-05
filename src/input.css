@@ -16,52 +16,123 @@
     --color-veryLightGray: hsl(0, 0%, 98%);
 
     /* font family */
-    --font-vietnam:"Be Vietnam Pro", serif;
+    --font-vietnam: "Be Vietnam Pro", serif;
 }
 
 /* nav section */
-.nav{
+.nav {
     @apply relative container mx-auto p-5
 }
-.nav-container{
+
+.nav-container {
     @apply flex items-center justify-between
 }
-.menu-items{
+
+.menu-items {
     @apply hidden md:flex justify-between gap-x-8
 }
-.menu-link{
-    @apply hover:text-darkGrayBlue 
+
+.menu-link {
+    @apply hover:text-darkGrayBlue
 }
-.btn{
-    @apply p-3 px-6 text-white bg-brightRed rounded-full hover:bg-brightRedLight
+
+.btn {
+    @apply p-3 px-6 text-white font-medium bg-brightRed rounded-full hover:bg-brightRedLight
 }
 
 /* hero section */
-.hero-container{
+.hero-container {
     @apply flex flex-col-reverse items-center container mx-auto px-6 mt-10 my-0 md:flex-row md:my-0
 }
-.hero-header{
+
+.hero-header {
     @apply max-w-md text-center text-darkBlue text-4xl font-bold md:text-5xl md:text-left
 }
-.hero-p{
+
+.hero-p {
     @apply max-w-sm my-12 text-center text-gray-400 md:text-left
 }
 
 /* feature section */
-.feature-container{
+.feature-container {
     @apply container mx-auto flex flex-col items-center px-4 mt-10 gap-12 md:gap-0 md:flex-row
 }
-.feature-h{
+
+.feature-h {
     @apply max-w-md text-4xl font-bold text-center md:text-left
 }
-.feature-p{
+
+.feature-p {
     @apply max-w-md text-center text-darkGrayBlue md:text-left
 }
 
+body {
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+}
 
+#CTA {
+    background-image: url(../images/bg-simplify-section-desktop.svg);
+    background-repeat: no-repeat;
 
+}
 
+@media(max-width:576px){
+    body{
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+    #CTA{
+        background-image: url(../images/bg-simplify-section-mobile.svg);
+    }
+}
 
+/* hambuger menu */
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+    position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+    transform: rotate(0);
+    transition: all 0.3s;
+}
+.hamburger-middle{
+    transform: translateY(7px);
+}
+.hamburger-bottom{
+    transform: translateY(14px);
+}
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle{
+    display: none;
+}
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
 
-
-
+#menu .menu-link:hover{
+    background-color: hsl(12, 88%, 69%);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}

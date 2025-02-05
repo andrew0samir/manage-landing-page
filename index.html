@@ -44,6 +44,23 @@
 			<div>
 				<a href="#" class="hidden md:block btn">Get Started</a>
 			</div>
+			<!-- hamburger icon -->
+			<button class="block hamburger md:hidden" id="menuBtn">
+				<span class="hamburger-top"></span>
+				<span class="hamburger-middle"></span>
+				<span class="hamburger-bottom"></span>
+			</button>
+		</div>
+		<!-- mobile menu -->
+		<div class="md:hidden">
+			<div id="menu" class="absolute flex-col items-center self-end py-8 mt-10 space-y-6 
+			font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md hidden">
+				<a href="#" class="menu-link">Pricing</a>
+				<a href="#" class="menu-link">Product</a>
+				<a href="#" class="menu-link">About Us</a>
+				<a href="#" class="menu-link">Careers</a>
+				<a href="#" class="menu-link">Community</a>
+			</div>
 		</div>
 	</nav>
 
@@ -211,12 +228,12 @@
 	</section>
 
 	<!-- CTA section -->
-	<section class="bg-brightRed">
+	<section id="CTA" class="bg-brightRed">
 		<!-- flex container -->
 		<div class="container mx-auto flex flex-col items-center justify-between 
-		px-6 py-24 md:flex-row md:py-12">
+		px-6 py-24 font-medium md:flex-row md:py-12">
 			<!-- heading -->
-			<h2 class="text-5xl font-medium text-center text-white 
+			<h2 class="text-5xl text-center text-white 
 			 md:text-4xl md:max-w-xl md:text-left">
 				Simplify how your team works today.
 			</h2>
@@ -245,19 +262,19 @@
 				<!-- socail links container -->
 				<div class="flex justify-center gap-x-4">
 					<a href="#">
-						<img src="images/icon-facebook.svg" class="h-8" alt="">
+						<img src="images/icon-facebook.svg" class="h-8 " alt="">
 					</a>
 					<a href="#">
-						<img src="images/icon-youtube.svg" class="h-8" alt="">
+						<img src="images/icon-youtube.svg" class="h-8 " alt="">
 					</a>
 					<a href="#">
-						<img src="images/icon-twitter.svg" class="h-8" alt="">
+						<img src="images/icon-twitter.svg" class="h-8 " alt="">
 					</a>
 					<a href="#">
-						<img src="images/icon-pinterest.svg" class="h-8" alt="">
+						<img src="images/icon-pinterest.svg" class="h-8 " alt="">
 					</a>
 					<a href="#">
-						<img src="images/icon-instagram.svg" class="h-8" alt="">
+						<img src="images/icon-instagram.svg" class="h-8 " alt="">
 					</a>
 				</div>
 			</div>
@@ -279,9 +296,9 @@
 			<div class="flex flex-col justify-between">
 				<form>
 					<div class="flex">
-						<input type="text" class="flex-1 px-4 rounded-full bg-white focus:outline-none"
+						<input type="email" class="flex-1 px-4 rounded-full bg-white focus:outline-none"
 							placeholder="Updates in your inbox…">
-						<button class="px-6 py-2 mx-2 text-white rounded-full
+						<button class="px-6 py-2 mx-2 text-white font-medium rounded-full
 						 bg-brightRed hover:bg-brightRedLight">Go</button>
 					</div>
 				</form>
@@ -296,7 +313,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Andrew Samir</a>.
   </div> -->
-
+  
+  <script src="js/script.js"></script>
 </body>
 
 </html>
